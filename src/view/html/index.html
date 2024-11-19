@@ -52,6 +52,8 @@
                     startButton.classList.remove('startButtonActive')
                     audioAlarm.play()
                     clearInterval(interval);
+                    interval = null;
+                    timerDisplay.textContent = '25:00'
                     alert("Timer finished");
                 }
 
@@ -61,10 +63,10 @@
 
             // Add event listener to the start button
             startButton.addEventListener('click', () => {
-                audioAlarm.play()
+                // audioAlarm.play()
                 // startButton.classList.remove('.startButton')
                 startButton.classList.add('startButtonActive')
-                const timerDuration = 5; // Set timer duration in seconds (e.g., 300 = 5 minutes)
+                const timerDuration = 1500; // Set timer duration in seconds (e.g., 300 = 5 minutes)
                 startTimer(timerDuration);
             });
         </script>
