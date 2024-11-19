@@ -9,6 +9,7 @@
 }
 body {
 	font-family: 'Montserrat', sans-serif;
+	color: var(--var-gray2);
 	line-height: 1.6;
 	margin: 0;
 	/* min-height: 100vh; */
@@ -25,16 +26,37 @@ body {
   
   /* Style the box */
   .box {
-	width: 200px;
+	width: 250px;
 	height: 100px;
-	background-color: #3498db;
+	background-color: transparent;
+	border: 2px solid var(--var-gray2);
 	/* color: white; */
 	display: flex;          /* Optional: center content inside the box */
 	justify-content: center; 
 	align-items: center;    
 	font-size: 1.5rem;
-	border-radius: 8px;
+	font-weight: 200;
   }
+  .controls
+  {
+	width: 50%;
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	margin: .2rem;
+  }
+  #startButton
+  {
+	height: 50%;
+	color: var(--var-gray2);
+	background-color: var(--var-gray1)
+  }
+  	.startButtonActive 
+	{
+		height: 50%;
+		color: var(--var-gray1) !important;
+		background-color: var(--var-gray2) !important;
+	}
   
 
 @media (min-width: 769px) {
