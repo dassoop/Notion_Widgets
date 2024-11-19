@@ -20,7 +20,6 @@ body {
 	justify-content: center; /* Horizontally center */
 	align-items: center;    /* Vertically center */
 	height: 100vh;          /* Full viewport height */
-	background-color: #f4f4f4; /* Optional background */
 	margin: 0;              /* Remove default margin */
   }
   
@@ -29,7 +28,7 @@ body {
 	width: 200px;
 	height: 100px;
 	background-color: #3498db;
-	color: white;
+	/* color: white; */
 	display: flex;          /* Optional: center content inside the box */
 	justify-content: center; 
 	align-items: center;    
