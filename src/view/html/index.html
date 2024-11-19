@@ -8,6 +8,7 @@
     </head>
     
     <body>
+        <audio id="audio-alarm" src="../audio/alarm.mp3"></audio>
         <div class="container">
             <div class="box">
                 <div class="controls">
@@ -21,6 +22,7 @@
         <script>
             const timerDisplay = document.getElementById('timer');
             const startButton = document.getElementById('startButton');
+            const audioAlarm = document.getElementById('audio-alarm');
 
             let interval = null
 
@@ -48,8 +50,9 @@
                 // Stop the timer when it reaches 0
                 if (timeRemaining <= 0) {
                     startButton.classList.remove('startButtonActive')
+                    audioAlarm.play()
                     clearInterval(interval);
-                    alert("Time's up!");
+                    alert("Timer finished");
                 }
 
                 timeRemaining--;
@@ -58,9 +61,10 @@
 
             // Add event listener to the start button
             startButton.addEventListener('click', () => {
+                audioAlarm.play()
                 // startButton.classList.remove('.startButton')
                 startButton.classList.add('startButtonActive')
-                const timerDuration = 1500; // Set timer duration in seconds (e.g., 300 = 5 minutes)
+                const timerDuration = 5; // Set timer duration in seconds (e.g., 300 = 5 minutes)
                 startTimer(timerDuration);
             });
         </script>
